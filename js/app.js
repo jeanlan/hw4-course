@@ -87,13 +87,15 @@ var loadPagesInfo = function(pages){
         // 塞資料到 html 中
         // 找到 thumbnail的 img 他的屬性是 src ，把連結取代
         $page.find('.thumbnail img').attr('src', response.data.url);
-        counter++;
-
+        
         // 要把一個一個插入目前的index 裡面，使用 current
         $page.appendTo(current);
+        counter++; // 紀錄60 個都插入完畢
+        
         // 塞完資料以後處理一下斷行
         if(counter===pages.length){
-          // 利用 .current div:nth-child(3n)，讓每三個page 斷行
+          // 利用 .current div:nth-child(3n)，讓每三個page 斷行 清除 float
+          $('.current div:nth-child(3n)').after( '<div class="clearfix"></div>)');
           current.children('div').unwrap();
         }
       });
