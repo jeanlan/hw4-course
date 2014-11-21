@@ -79,7 +79,7 @@ var loadPagesInfo = function(pages){
       // 塞 name, about, like 數到 html 裡。
       // 變數(title, about, likes)叫什麼名字可以去 https://developers.facebook.com/tools/explorer 查
       // 因為是 class, 要加.: .title, .about, .likes
-      $page.find('.title a').text(response.name).attr('href'response.link);
+      $page.find('.title a').text(response.name).attr('href',response.link);
       $page.find('.about').text(response.about);
       $page.find('.likes').text(response.likes);
 
