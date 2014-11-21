@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Facebook API and AJAX example</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+		<div class="container">
+			<header class="page-header">
+				<h1>臉書粉絲專頁瀏覽器</h1>
+			</header>
+			<div class="jumbotron">
+			  <h1>你知道你按過哪些讚嗎？</h1>
+			  <p>來看看自己究竟幫哪些粉絲專頁按了讚！</p>
+			  <p><a id="startBtn" class="btn btn-primary btn-lg" href="#" role="button">開始瀏覽</a></p>
+			</div>
+			<!-- hide user before get data -->
+			<section id="user">
+				<div class="media">
+					<span class="media-left">
+			    	<img class="user-photo" src="" alt="user-image">
+			    </span>
+				  <div class="media-body">
+			    	<h3 class="media-heading user-name"></h3>
+			    	<p>你按過讚的粉絲專頁有：</p>
+				  </div>
+				</div>
+			</section>
+			<section id="pages">
+				<div class="row page-list">
+					<!-- insert item HERE! -->
+				</div>
+			</section>
+			<div class="row">
+				<div class="col-md-2 col-md-offset-5">
+					<a id="moreBtn" class="btn btn-default btn-block hide" href="#" role="button">瀏覽更多</a>
+				</div>
+			</div>
+			<footer class="text-center">
+				<p>資訊系統訓練班 246 期 Ajax & Facebook 練習作業</p>
+				<!-- insert your iframe -->
+				<iframe></iframe>
+			</footer>
+		</div>
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="js/app.js"></script>
+		<script type="text/javascript" src="http://connect.facebook.net/en_US/all.js" id="facebook-jssdk"></script>
+</body>
+</html>
