@@ -95,7 +95,7 @@ var loadPagesInfo = function(pages){
         // 塞完資料以後處理一下斷行
         if(counter===pages.length){
           // 利用 .current div:nth-child(3n)，讓每三個page 斷行 清除 float
-          $('.current div:nth-child(3n)').after( '<div class="clearfix"></div>)');
+          $('.current div:nth-child(3n)').after( '<div class="clearfix"></div>');
           current.children('div').unwrap();
         }
       });
