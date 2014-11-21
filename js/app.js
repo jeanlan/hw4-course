@@ -49,7 +49,7 @@ window.fbAsyncInit = function() {
               //把讀到的資料放進html
               loadPagesInfo(likes);
               // 課堂練習六 save next request url to moreBtn and show it
-              $('#moreBtn').data('next', next);
+              $('#moreBtn').data('next', next).removeClass('hide');
             });
         }else{
             console.log('User cancelled login or did not fully authorize.');
@@ -62,7 +62,7 @@ window.fbAsyncInit = function() {
     $('#moreBtn').click(function(e){
       $.getJSON( $(this).data('next'), function(response){
         //更新列表資料
-        loadPagesInfo();
+        loadPagesInfo(response.data);
       })
       e.preventDefault();
     });
